@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Master Sword Search</title>
+  <style>
+    :root { color-scheme: light dark; --bg: #ffffff; --fg: #1f1f1f; --muted: #5f6368; --accent: #2a4fd0; }
+    @media (prefers-color-scheme: dark) { :root { --bg: #202124; --fg: #e8eaed; --muted: #9aa0a6; --accent: #8ab4f8; } }
+    body { margin: 0; width: 290px; background: var(--bg); color: var(--fg); font: 13px/1.4 system-ui, sans-serif; }
+    header { display: flex; align-items: center; gap: 10px; padding: 12px 14px 8px; }
+    header img { width: 32px; height: 32px; }
+    h1 { font-size: 15px; margin: 0; }
+    p.sub { margin: 2px 0 0; color: var(--muted); font-size: 12px; }
+    label { display: flex; gap: 10px; align-items: flex-start; padding: 8px 14px; cursor: pointer; }
+    label:hover { background: color-mix(in srgb, var(--accent) 10%, transparent); }
+    input { margin: 2px 0 0; accent-color: var(--accent); }
+    small { display: block; color: var(--muted); }
+    footer { padding: 8px 14px 12px; color: var(--muted); font-size: 11px; border-top: 1px solid color-mix(in srgb, var(--muted) 30%, transparent); }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="icons/icon48.png" alt="">
+    <div>
+      <h1>Master Sword Search</h1>
+      <p class="sub">Travel to 1998 on any Google search</p>
+    </div>
+  </header>
+  <label>
+    <input type="checkbox" id="enabled">
+    <span>Show the Master Sword on Google searches</span>
+  </label>
+  <label>
+    <input type="checkbox" id="sound">
+    <span>Play the sword and time-warp sounds</span>
+  </label>
+  <label>
+    <input type="checkbox" id="skipNative">
+    <span>Leave Zelda searches to Google's own Easter egg
+      <small>Turn off to use this sword instead of Google's on "Zelda" and "Ocarina of Time" searches.</small></span>
+  </label>
+  <footer>Unofficial fan extension. Not affiliated with Google or Nintendo.</footer>
+  <script src="popup.js"></script>
+</body>
+</html>

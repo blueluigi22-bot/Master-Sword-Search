@@ -1,0 +1,51 @@
+{
+  "manifest_version": 3,
+  "name": "Master Sword Search",
+  "version": "3.0.0",
+  "description": "Google's OOT Master Sword on every Google search: the real sword, Triforce time warp, sounds and 1998 results page.",
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "action": {
+    "default_title": "Master Sword Search",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png"
+    }
+  },
+  "permissions": [
+    "storage"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.google.com/search*",
+        "https://www.google.ca/search*",
+        "https://www.google.co.uk/search*",
+        "https://www.google.com.au/search*",
+        "https://www.google.co.nz/search*",
+        "https://www.google.ie/search*",
+        "https://www.google.co.in/search*",
+        "https://www.google.co.jp/search*",
+        "https://www.google.de/search*",
+        "https://www.google.fr/search*",
+        "https://www.google.es/search*",
+        "https://www.google.it/search*",
+        "https://www.google.nl/search*",
+        "https://www.google.com.br/search*",
+        "https://www.google.com.mx/search*"
+      ],
+      "css": [
+        "content.css"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_start"
+    }
+  ]
+}

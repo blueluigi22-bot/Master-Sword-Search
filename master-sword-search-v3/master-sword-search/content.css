@@ -1,0 +1,14 @@
+/* While the tab is "in the past", hide the modern results page before it paints.
+   The 1998 page lives in a shadow root attached outside <body>, so it stays visible. */
+html[data-mss-era="past"] {
+  overflow: hidden !important;
+}
+
+html[data-mss-era="past"] body {
+  visibility: hidden !important;
+}
+
+/* Google's own sword also lives outside <body>. When ours is showing, keep just one. */
+html[data-mss-active] [jsname="GYubmd"] {
+  display: none !important;
+}
